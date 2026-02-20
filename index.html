@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support ObsidianKing</title>
+<link href="https://fonts.googleapis.com" rel="stylesheet">
+<style>
+    body { 
+        margin: 0; 
+        font-family: 'Kanit', sans-serif; 
+        background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+        color: #fff; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        min-height: 100vh; 
+        overflow: hidden;
+    }
+
+    .container { 
+        position: relative;
+        padding: 45px 25px; 
+        max-width: 400px; 
+        width: 85%; 
+        background: rgba(15, 15, 15, 0.85); 
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 20px; 
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 25px 50px rgba(0,0,0,1); 
+        z-index: 10;
+        text-align: center;
+    }
+
+    h1 { 
+        font-size: 32px; 
+        font-weight: 700;
+        margin-bottom: 5px; 
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: linear-gradient(90deg, #ffffff, #666, #ffffff);
+        background-size: 200% auto;
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        animation: shine 4s linear infinite;
+    }
+
+    @keyframes shine { to { background-position: 200% center; } }
+    .subtitle { color: rgba(255,255,255,0.7); font-weight: 300; font-size: 15px; margin-bottom: 30px; }
+
+    .button { 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin: 15px 0; 
+        padding: 16px; 
+        border-radius: 8px; 
+        text-decoration: none; 
+        font-weight: 500; 
+        transition: 0.3s all; 
+        gap: 12px; 
+        cursor: pointer; 
+        border: none; 
+        width: 100%; 
+        font-size: 15px; 
+        color: #fff; 
+        box-sizing: border-box;
+        text-transform: uppercase;
+    }
+
+    .donate { background: #ffffff; color: #000; font-weight: 700; }
+    .bank { background: transparent; border: 1px solid rgba(255,255,255,0.2); }
+    
+    .social-grid { 
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 8px; 
+        margin-top: 20px; 
+    }
+    
+    .social { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); padding: 12px; }
+    .button:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); border-color: rgba(255,255,255,0.5); }
+
+    .bank-info { 
+        display: none; 
+        background: rgba(255, 255, 255, 0.05); 
+        padding: 20px; 
+        border-radius: 8px; 
+        margin-bottom: 10px; 
+        border: 1px solid rgba(255, 255, 255, 0.1); 
+        animation: fadeIn 0.4s ease; 
+    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .copy-status { font-size: 11px; color: #00ffcc; display: none; margin-top: 8px; }
+    .footer { margin-top: 40px; color: rgba(255,255,255,0.2); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+    svg { width: 20px; height: 20px; fill: #fff; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>ObsidianKing</h1>
+    <p class="subtitle">ขอบคุณที่ติดตามนะครับ ❤️
+สนับสนุนได้นะครับ♥️🥺</p>
+    <button class="button bank" onclick="toggleBank()">
+        โอนผ่านทรูมันนี่กับธนาคารKKP Start Saving
+    </button>
+    
+    <div id="bankDetails" class="bank-info">
+        <p style="font-size: 11px; color: #666;">แตะที่เลขเพื่อคัดลอก</p>
+        <p onclick="copyAccount()" style="color: #fff; font-size: 22px; letter-spacing: 2px; cursor: pointer; margin: 10px 0;">
+            <b>0614808071 205-743636-2</b>
+        </p>
+        <p id="copyMsg" class="copy-status">คัดลอกเลขบัญชีแล้ว!</p>
+        <p style="font-size: 13px; color: #888;">ชื่อบัญชี: <b>ณัฐชนน คำมูล</b></p>
+    </div>
+
+ 
+
+    <div class="social-grid">
+        <a href="https://discord.gg" target="_blank" class="button social" style="background: #5865F2; border: none;">
+            <svg viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.06,72.06,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.71,32.65-1.82,56.6.48,80.1a105.73,105.73,0,0,0,32.22,16.26,77.7,77.7,0,0,0,7.34-11.97,64.3,64.3,0,0,1-11.73-5.57c.97-.68,1.9-1.41,2.81-2.15a74.14,74.14,0,0,0,64.08,0c.9,0.74,1.82,1.47,2.81,2.15a64.15,64.15,0,0,1-11.75,5.57,77.06,77.06,0,0,0,7.34,11.97,105,105,0,0,0,32.27-16.26C129.58,50.79,122.34,27.21,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5.07-12.67,11.41-12.67S54,46,53.86,53,48.8,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5.07-12.67,11.44-12.67S96.23,46,96.12,53,91.06,65.69,84.69,65.69Z""")/>></svg>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="button social">
+            <svg viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z""")/>></svg>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="button social">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="button social">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+        </a>
+    </div>
+
+    <!-- YouTube Music -->
+    <div id="music-player" style="display:none"></div>
+
+    <div class="footer">เดี๋ยวมีอะไรอัพเดทอีกในอนาคต</div>
+</div>
+
+<script>
+    // ส่วนที่ 1: จัดการเพลง YouTube
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('music-player', {
+            height: '0', width: '0',
+            videoId: 'mYVfV3p7X18', // ใส่ ID เพลง YouTube ตรงนี้ (ตัวอย่าง: เพลงแนว Chill)
+            events: { 'onReady': onPlayerReady }
+        });
+    }
+    function onPlayerReady(event) { event.target.setVolume(40); }
+
+    // เริ่มเพลงเมื่อกดตรงไหนก็ได้บนหน้าจอครั้งแรก
+    document.body.addEventListener('click', function() {
+        if (player && player.playVideo) { player.playVideo(); }
+    }, { once: true });
+
+    // ส่วนที่ 2: ระบบคัดลอก (อัปเกรด)
+    function toggleBank() {
+        var x = document.getElementById("bankDetails");
+        x.style.display = (x.style.display === "block") ? "none" : "block";
+    }
+
+    function copyAccount() {
+        var accNo = "2057436362";
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(accNo).then(showSuccess);
+        } else {
+            // สำรองสำหรับมือถือบางรุ่น/Line/FB
+            var textArea = document.createElement("textarea");
+            textArea.value = accNo;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try { document.execCommand('copy'); showSuccess(); } 
+            catch (err) { alert('กรุณาคัดลอกเลขบัญชีด้วยตนเอง'); }
+            document.body.removeChild(textArea);
+        }
+    }
+
+    function showSuccess() {
+        var msg = document.getElementById("copyMsg");
+        msg.style.display = "block";
+        setTimeout(function() { msg.style.display = "none"; }, 2500);
+    }
+</script>
+
+</body>
+</html>
